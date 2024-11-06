@@ -1,41 +1,33 @@
 import React, { useEffect, useState, useContext } from "react";
 import "../../styles/home.css";
 import PropTypes from "prop-types";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
+
+
 
 export const Edit = () => {
 
+    const { store, actions } = useContext(Context);
     const navigate = useNavigate();
     const [inputFullname, setInputFullname] = useState("");
     const [inputEmail, setInputEmail] = useState("");
     const [inputPhone, setInputPhone] = useState("");
     const [inputAddress, setInputAddress] = useState("");
 
+    const params = useParams();
 
-    
-    const handleSubmit = () => {
-        // Add a new contact using a fetch POST request
-        fetch("https://playground.4geeks.com/contact/agendas/Derek/contacts", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                name: inputFullname,
-                email: inputEmail,
-                address: inputAddress,
-                phone: inputPhone
-            })
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                if (data) {
-                    navigate("/"); // Redirect to the home page
-                }
-            })
-            .catch((err) => console.error("Error adding contact:", err));
-    };
+    useEffect(
+        () => {
+            let foundPerson = store.contactList.find((contact) => contact.id == params.id);
+            console.log("x", foundPerson);
+            setInputFullname(foundPerson.name);
+            setInputEmail(foundPerson.email);
+            setInputPhone(foundPerson.phone);
+            setInputAddress(foundPerson.address);
+
+        }, []
+    )
 
 
 
@@ -80,7 +72,7 @@ export const Edit = () => {
             </div>
 
             <div className="save-button">
-                <button onClick={handleSubmit}>Button</button>
+                <button onClick={() => actions.handleSubmitEdit(inputFullname, inputEmail, inputAddress, inputPhone)}>Button</button>
 
             </div>
 

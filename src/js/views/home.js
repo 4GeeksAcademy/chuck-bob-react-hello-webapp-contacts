@@ -1,9 +1,11 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "../../styles/home.css";
 import { Context } from "../store/appContext";
 import { Contact } from "./contact";
 import { Submit } from "./submit";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+
 
 export const Home = () => {
     const { store, actions } = useContext(Context);
