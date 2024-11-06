@@ -1,17 +1,144 @@
-/* 
-    General Styles
-*/
+/* General Styles */
 
+/* Set a consistent size for images */
 .img-100 {
     width: 100px;
     height: 100px;
+    border-radius: 10px; /* Rounded corners for a smoother appearance */
 }
 
+/* Centering and spacing for the contact list */
 #contactList {
-    display:block;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; /* Space between cards */
+    margin: 2rem auto; /* Center horizontally and add vertical margin */
 }
+
+/* Card styling for consistent layout */
 .card {
     display: flex;
-   
+    align-items: center;
+    justify-content: space-between; /* Spread out elements across the width */
+    padding: 5rem;
+    gap: 20rem;
+    border: 1px solid #e0e0e0; /* Light border around the card */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visual separation */
+    background-color: #ffffff;
+    width: 80%;
+    max-width: 800px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Card left section for images */
+.card-left {
+    flex-shrink: 0;
+}
+
+/* Card body section for contact details */
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.card-address,
+.card-phone,
+.card-email {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Card right section for action buttons */
+.card-right {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Button styling */
+.card-right button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card-right button:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+/* Specific button styles */
+.btn-primary {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+/* Title section for adding/editing contacts */
+.title-for-add {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Input fields for forms */
+input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Save button styling */
+.save-button button {
+    padding: 0.75rem 1.5rem;
+    background-color: #28a745;
+    color: #ffffff;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.save-button button:hover {
+    background-color: #218838;
+}
+
+/* Modal styling for delete confirmation */
+.modal-content {
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.modal-footer button {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
