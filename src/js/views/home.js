@@ -37,7 +37,7 @@ export const Home = () => {
                 </div>
             </div>
 
-            <Link to={"/submit"} > <button> add new </button>
+            <Link to={"/submit"} > <button className="btn-secondary other-button"> add new </button>
 
             </Link>
 

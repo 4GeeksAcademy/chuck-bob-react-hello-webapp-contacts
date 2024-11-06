@@ -33,7 +33,7 @@ export const Contact = ({ contact, setId }) => {
                 <div className="card-right">
 
                     <Link to={`/edit/${contact.id}`}>
-                        <button>Edit</button>
+                        <button type="button" className="btn btn-secondary" >Edit</button>
 
                     </Link>
 

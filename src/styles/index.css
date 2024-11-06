@@ -19,23 +19,11 @@
 /* Card styling for consistent layout */
 .card {
     display: flex;
-    align-items: center;
     justify-content: space-between; /* Spread out elements across the width */
     padding: 5rem;
     gap: 20rem;
-    border: 1px solid #e0e0e0; /* Light border around the card */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visual separation */
-    background-color: #ffffff;
-    width: 80%;
-    max-width: 800px;
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
 }
 
-.card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
-}
 
 /* Card left section for images */
 .card-left {
@@ -82,19 +70,15 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
-.card-right button:hover {
-    background-color: #0056b3;
-    color: #ffffff;
-}
 
 /* Specific button styles */
 .btn-primary {
-    background-color: #007bff;
+    background-color: #00eaff;
     color: #ffffff;
 }
 
 .btn-secondary {
-    background-color: #6c757d;
+    background-color: #107bd9;
     color: #ffffff;
 }
 
@@ -128,10 +112,6 @@ input[type="text"] {
     transition: background-color 0.3s;
 }
 
-.save-button button:hover {
-    background-color: #218838;
-}
-
 /* Modal styling for delete confirmation */
 .modal-content {
     padding: 1.5rem;
@@ -141,4 +121,10 @@ input[type="text"] {
 .modal-footer button {
     padding: 0.5rem 1rem;
     border-radius: 5px;
+}
+
+.other-button {
+    position: absolute; /* Use absolute positioning */
+    right: 1rem; /* Align to the right */
+    top: 1rem; /* Align to the top */
 }

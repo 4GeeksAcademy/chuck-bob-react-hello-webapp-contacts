@@ -76,7 +76,7 @@ export const Edit = () => {
                 <button onClick={() => {
                 actions.handleSubmitEdit(params.id, inputFullname, inputEmail, inputAddress, inputPhone)
                 navigate("/"); // Redirect to the home page
-                }}>Button</button>
+                }}>Submit Changes</button>
                 
             </div>
 
