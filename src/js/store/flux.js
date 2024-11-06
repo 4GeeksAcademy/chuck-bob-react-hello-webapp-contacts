@@ -14,10 +14,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(err => console.error("Error fetching contacts:", err));
 			},
 
-			handleSubmitEdit: (inputFullname, inputEmail, inputAddress, inputPhone) => {
+			handleSubmitEdit: (id, inputFullname, inputEmail, inputAddress, inputPhone) => {
 				// Add a new contact using a fetch POST request
 				fetch("https://playground.4geeks.com/contact/agendas/Derek/contacts/" + id, {
-					method: "PATCH",
+					method: "PUT",
 					headers: {
 						"Content-Type": "application/json"
 					},
@@ -31,7 +31,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then((res) => res.json())
 					.then((data) => {
 						if (data) {
-							navigate("/"); // Redirect to the home page
+							
 						}
 					})
 					.catch((err) => console.error("Error adding contact:", err));

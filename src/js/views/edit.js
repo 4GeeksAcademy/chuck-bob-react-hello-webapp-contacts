@@ -31,9 +31,10 @@ export const Edit = () => {
 
 
 
+
     return (
         <div>
-            <div className="title-for-add"><h1>Add a new contact</h1></div>
+            <div className="title-for-add"><h1>Edit contact</h1></div>
 
             <div className="fullname">
                 <label>Full Name</label>
@@ -72,8 +73,11 @@ export const Edit = () => {
             </div>
 
             <div className="save-button">
-                <button onClick={() => actions.handleSubmitEdit(inputFullname, inputEmail, inputAddress, inputPhone)}>Button</button>
-
+                <button onClick={() => {
+                actions.handleSubmitEdit(params.id, inputFullname, inputEmail, inputAddress, inputPhone)
+                navigate("/"); // Redirect to the home page
+                }}>Button</button>
+                
             </div>
 
             <Link to={"/"}>or get back to contacts

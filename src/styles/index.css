@@ -5,38 +5,13 @@
 .img-100 {
     width: 100px;
     height: 100px;
-  }
+}
 
-  .card {
+#contactList {
+    display:block;
+    margin: auto;
+}
+.card {
     display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Aligns all elements from left to right */
-    padding: 1rem;
-    gap: 2rem; /* Adds space between the elements */
-}
-
-.card-left {
-    flex-shrink: 0; /* Ensures the image size stays consistent */
-}
-
-.card-body {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-shrink: 0
-}
-
-.card-right {
-    display: flex;
-    flex-direction: row; /* Arrange buttons side by side */
-    gap: 1rem; /* Adds space between the buttons */
-    flex-shrink: 0
-}
-
-.card-img-top {
-    width: 100px;
-    height: 100px;
-    object-fit: cover; /* Ensures the image fits nicely without distorting */
-    flex-shrink: 0
+   
 }
