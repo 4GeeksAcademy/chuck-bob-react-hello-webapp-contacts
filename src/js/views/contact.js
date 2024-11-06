@@ -37,7 +37,8 @@ export const Contact = ({ contact, setId }) => {
 
                     </Link>
 
-                    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => setId(contact.id)}>
+                    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                    onClick={() => setId(contact.id)}>
                         Delete Entry
                     </button>
                 </div>

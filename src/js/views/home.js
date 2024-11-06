@@ -37,15 +37,17 @@ export const Home = () => {
                 </div>
             </div>
 
+            <Link to={"/submit"} > <button> add new </button>
+
+            </Link>
+
 
             <div id="contactList">
                 {store.contactList.map((contact) => (
                     <Contact key={contact.id} contact={contact} setId={setId} />
                 ))}
 
-                <Link to={"/submit"} > go to submit page
 
-                </Link>
 
             </div>
         </div>
